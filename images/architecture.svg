@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="300" viewBox="0 0 860 300">
+  <rect width="860" height="300" fill="#0b1220"/>
+  <text x="20" y="32" fill="#e8eefc" font-size="18" font-family="Segoe UI, Arial" font-weight="700">Notarization + eID Concepts — Integrity Flow</text>
+  <rect x="30" y="90" width="140" height="55" rx="8" fill="#1e293b" stroke="#5b8cff"/><text x="55" y="122" fill="#e8eefc" font-size="13" font-family="Segoe UI, Arial">Document</text>
+  <rect x="210" y="90" width="140" height="55" rx="8" fill="#1e293b" stroke="#34d399"/><text x="235" y="122" fill="#e8eefc" font-size="13" font-family="Segoe UI, Arial">SHA-256</text>
+  <rect x="390" y="90" width="160" height="55" rx="8" fill="#1e293b" stroke="#fbbf24"/><text x="410" y="122" fill="#e8eefc" font-size="13" font-family="Segoe UI, Arial">Record + eID meta</text>
+  <rect x="590" y="90" width="140" height="55" rx="8" fill="#1e293b" stroke="#a78bfa"/><text x="620" y="122" fill="#e8eefc" font-size="13" font-family="Segoe UI, Arial">Ledger</text>
+  <rect x="390" y="190" width="160" height="55" rx="8" fill="#1e293b" stroke="#94a3b8"/><text x="420" y="222" fill="#e8eefc" font-size="13" font-family="Segoe UI, Arial">Verify MATCH/MISMATCH</text>
+  <text x="20" y="280" fill="#94a3b8" font-size="12" font-family="Segoe UI, Arial">Portfolio integrity demo (SQLite ledger). Smart contracts / real eID are roadmap items.</text>
+</svg>

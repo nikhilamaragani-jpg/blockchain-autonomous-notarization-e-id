@@ -1,16 +1,15 @@
 <div align="center">
 
-# Blockchain-Inspired Document Notarization + eID Concepts
+# Blockchain-Inspired Notarization + eID Concepts
 
-### Cryptography · Integrity · Digital Identity · Audit Ledger
+### Production-style Integrity Application · Cryptography · Audit Ledger
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Security](https://img.shields.io/badge/Hashing-SHA--256-informational)](src/hasher.py)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](Dockerfile)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Portfolio security / identity system** by [Amaragani Nikhil Sai](https://github.com/nikhilamaragani-jpg)  
-Runnable integrity workflow. SQLite ledger demo — not a mainnet smart-contract deployment.
+**Amaragani Nikhil Sai** · Portfolio security / identity system  
+Industry mentoring: Conscience Technologies (Apr–May 2025). SQLite ledger demo — not a mainnet deployment.
 
 </div>
 
@@ -18,92 +17,43 @@ Runnable integrity workflow. SQLite ledger demo — not a mainnet smart-contract
 
 ## Problem
 
-Paper notarization is slow, hard to verify remotely, and weak for audit trails. Digital documents need **tamper-evident fingerprints**, **identity-linked records**, and **fast verification**.
+Remote verification of document integrity is hard with paper-first processes. Teams need tamper-evident fingerprints, identity-linked records, and fast verify paths.
 
 ---
 
 ## Solution
 
-A **blockchain-inspired autonomous notarization prototype**:
-
-1. Hash document content (SHA-256)  
-2. Create a notarization record (owner / eID concept, timestamp, status)  
-3. Persist to a ledger store (SQLite demo)  
-4. Re-hash to verify MATCH / MISMATCH  
-
-Industry mentoring: **Conscience Technologies** (Apr–May 2025).
+A **production-style integrity application**: hash → notarize record (eID-oriented metadata) → ledger store → verify MATCH/MISMATCH.
 
 ---
 
 ## Features
 
-- Deterministic SHA-256 fingerprints  
-- Notarization record model  
-- Integrity verification demo (valid + tampered)  
+- SHA-256 fingerprints  
+- Notarization records  
+- Integrity verification demo  
 - Ledger listing  
-- Dockerized demo run  
-- Unit tests for hashing / verify  
+- Docker + CI tests  
 
 ---
 
 ## Architecture
 
-```text
-Document bytes/text
-      |
-      v
-SHA-256 fingerprint
-      |
-      v
-Notarization record (owner, name, hash, time, status)
-      |
-      v
-Ledger store (SQLite demo)  ---->  Verify: re-hash compare
-```
-
-```mermaid
-flowchart LR
-  D[Document] --> H[SHA-256]
-  H --> R[Record + eID concept]
-  R --> L[Ledger]
-  D2[Submitted copy] --> V[Verify]
-  L --> V
-  V --> O[MATCH / MISMATCH]
-```
+![Architecture](images/architecture.svg)
 
 ---
 
 ## Tech stack
 
-| Area | Technology |
-|------|------------|
-| Language | Python 3 |
-| Crypto | hashlib SHA-256 |
-| Storage | SQLite ledger |
-| Packaging | Docker |
-| Quality | pytest |
-| Roadmap | Web3 contracts, PKI/eID, Django UI |
+Python · hashlib · SQLite · Docker · pytest
 
 ---
 
 ## Folder structure
 
 ```text
-.
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── Dockerfile
-├── docker-compose.yml
-├── src/
-│   ├── main.py
-│   ├── hasher.py
-│   ├── notarization.py
-│   └── database.py
-├── tests/
-├── docs/
-├── data/
-└── images/
+src/ tests/ docs/ data/ images/ scripts/ config/
+Dockerfile docker-compose.yml requirements.txt
 ```
 
 ---
@@ -130,52 +80,44 @@ docker compose up --build
 
 ## Project workflow
 
-1. Prepare document text  
-2. Generate hash  
-3. Attach owner / demo eID metadata  
-4. Write ledger row  
-5. Verify original (MATCH) and tampered (MISMATCH)  
+1. Hash document  
+2. Create record with owner/eID metadata  
+3. Persist ledger row  
+4. Verify original vs tampered  
 
 ---
 
 ## Screenshots
 
-See `images/README.md` for capture checklist (CLI verify output).
+Architecture: [images/architecture.svg](images/architecture.svg)  
+Capture CLI MATCH/MISMATCH to `images/cli_demo.png`.
 
 ---
 
 ## Results
 
-| Capability | Status |
-|------------|--------|
-| Hash + record + verify | Implemented |
-| Ledger snapshot | Implemented |
-| On-chain smart contracts | Roadmap |
-| Real national eID / PKI | Roadmap |
+Demo proves hash stability and mismatch detection. On-chain contracts are roadmap only.
 
 ---
 
 ## Future improvements
 
-- [ ] Ethereum/testnet notary contract  
-- [ ] Real PKI signature binding  
-- [ ] REST API for verify endpoints  
-- [ ] Immutable object storage for originals (hash-only on chain)  
+- [ ] Testnet smart contract notary  
+- [ ] Real PKI / eID binding  
+- [ ] REST verify API  
 
 ---
 
 ## Skills demonstrated
 
-Applied cryptography basics · integrity design · digital identity concepts · modular Python · honest security scoping · Docker demos
+Applied cryptography · integrity design · digital identity concepts · modular Python · Docker · honest security scoping
 
 ---
 
 ## Documentation
 
-[PROJECT_BRIEF](docs/PROJECT_BRIEF.md) · [DEMO](docs/DEMO.md) · [INTERVIEW](docs/INTERVIEW.md) · [RESUME_BULLETS](docs/RESUME_BULLETS.md) · [ABOUT_TOPICS](docs/ABOUT_TOPICS.md)
+[PROJECT_BRIEF](docs/PROJECT_BRIEF.md) · [DEMO](docs/DEMO.md) · [INTERVIEW](docs/INTERVIEW.md) · [RESUME_BULLETS](docs/RESUME_BULLETS.md)
 
 ## License
 
-MIT
-
-**Author:** Amaragani Nikhil Sai · https://nikhilamaragani-jpg.github.io/
+MIT · **Author:** Amaragani Nikhil Sai · https://nikhilamaragani-jpg.github.io/

@@ -1,7 +1,7 @@
 # GitHub About
 
-**Description:** Blockchain-inspired notarization + eID concepts | SHA-256 · integrity · ledger demo
+**Description:** Production-style document integrity demo | SHA-256 · ledger · digital identity concepts
 
 **Homepage:** https://nikhilamaragani-jpg.github.io/
 
-**Topics:** python, blockchain, cryptography, digital-identity, security, sha256
+**Topics:** python, cryptography, blockchain, digital-identity, security, sha256, docker
