@@ -1,65 +1,75 @@
 # Blockchain-Based Autonomous Notarization Using National E-ID
 
-**B.Tech Mini Project** | Blockchain | Digital Identity | Smart Contracts Concept
+**B.Tech Mini Project** | Blockchain Concepts | Digital Identity | Document Integrity
 
-An academic project exploring how blockchain and digital identity concepts can be combined to design a secure digital notarization workflow.
+A prototype that demonstrates document hashing, verification, and ledger-style storage for a digital notarization workflow.
 
 ---
 
 ## Overview
 
-Traditional notarization processes often depend on centralized authorities. This project studies how blockchain principles (immutability, transparency) and electronic identity verification can support a more secure digital notarization concept.
+This project focuses on core ideas behind trustworthy digital notarization:
 
-**Project Type:** Academic / Conceptual Design  
-**Status:** Concept + Basic Structure
+- Generate a cryptographic hash of document content
+- Create a notarization-style record
+- Verify integrity by re-hashing
+- Store records in a local ledger (SQLite)
 
----
-
-## Problem Statement
-
-Digital documents need trustworthy verification mechanisms. Centralized systems can face issues related to trust, transparency, and tampering risks.
-
-This project explores:
-- Using blockchain ideas for record integrity
-- Linking notarization with digital identity concepts
-- Designing a simple conceptual workflow
+**Project Type:** Academic Prototype  
+**Status:** Runnable hashing + verification + ledger demo
 
 ---
 
-## Key Concepts Covered
+## Architecture
 
-- Blockchain fundamentals
-- Digital identity and verification ideas
-- Smart contract concepts
-- Hashing and document integrity
-- System design for trust and transparency
+```text
+Document Content
+      |
+      v
++------------------+
+| Hash Generator   |  (SHA-256)
++------------------+
+      |
+      v
++------------------+
+| Notarization     |  (create record with owner + timestamp)
++------------------+
+      |
+      v
++------------------+
+| SQLite Ledger    |  (persistent record storage)
++------------------+
+      |
+      v
+Integrity Verification
+```
 
 ---
 
 ## Tech Stack
 
-| Area              | Technologies / Concepts     |
-|-------------------|-----------------------------|
-| Language          | Python                      |
-| Blockchain Ideas  | Hashing, immutability, records |
-| Concepts          | Digital identity, smart contracts |
-| Tools             | Git                         |
+| Area | Technology |
+|------|------------|
+| Language | Python |
+| Cryptography | SHA-256 hashing |
+| Storage | SQLite |
+| Concepts | Digital identity, immutable records |
 
 ---
 
 ## Project Structure
 
-```
+```text
 blockchain-autonomous-notarization-e-id/
-━━ README.md
-━━ requirements.txt
-━━ .gitignore
-━━ LICENSE
-━━ src/
+├── README.md
+├── requirements.txt
+├── data/
+├── src/
 │   ├── main.py
 │   ├── hasher.py
-│   └── notarization.py
-━━ docs/
+│   ├── notarization.py
+│   └── database.py
+└── LICENSE
 ```
 
 ---
@@ -72,8 +82,8 @@ cd blockchain-autonomous-notarization-e-id
 
 python -m venv venv
 source venv/bin/activate
-
 pip install -r requirements.txt
+
 python src/main.py
 ```
 
@@ -81,40 +91,22 @@ python src/main.py
 
 ## Current Status
 
-- [x] Problem definition
-- [x] Conceptual design
-- [x] Repository structure
-- [x] Basic hashing and notarization demo logic
+- [x] Hash-based integrity demo
+- [x] Notarization record creation
+- [x] Verification logic
+- [x] SQLite ledger storage
 - [ ] Smart contract implementation
-- [ ] Full E-ID integration (conceptual only for now)
-
----
-
-## Learning Outcomes
-
-- Understanding blockchain principles
-- Applying cryptographic hashing for document integrity
-- Designing trust-oriented system workflows
-- Structuring academic technical projects
-
----
-
-## Future Improvements
-
-- Add simple smart contract examples (Solidity)
-- Improve documentation of the notarization flow
-- Explore decentralized storage concepts (e.g., IPFS ideas)
-- Create a clearer architecture diagram
+- [ ] Real E-ID provider integration
 
 ---
 
 ## Author
 
 **Amaragani Nikhil Sai**  
-B.Tech in Computer Science and Engineering  
+B.Tech in Computer Science and Engineering
 
-- GitHub: [nikhilamaragani-jpg](https://github.com/nikhilamaragani-jpg)  
-- LinkedIn: [Amaragani Nikhil Sai](https://linkedin.com/in/amaraganinikhilsai)  
+- GitHub: [nikhilamaragani-jpg](https://github.com/nikhilamaragani-jpg)
+- LinkedIn: [Amaragani Nikhil Sai](https://linkedin.com/in/amaraganinikhilsai)
 - Email: nikhilamaragani@gmail.com
 
 ---
