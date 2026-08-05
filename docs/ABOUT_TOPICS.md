@@ -1,10 +1,7 @@
-# GitHub About (set in repo Settings / sidebar)
+# GitHub About
 
-**Description (suggested):**
-B.Tech Mini Project: Blockchain-Inspired Notarization + eID Concepts | SHA-256, Ledger, Integrity Verification
+**Description:** Blockchain-inspired notarization + eID concepts | SHA-256 · integrity · ledger demo
 
-**Homepage:**
-https://nikhilamaragani-jpg.github.io/
+**Homepage:** https://nikhilamaragani-jpg.github.io/
 
-**Topics (add one by one):**
-python, blockchain, cryptography, digital-identity, security, sha256, btech-project
+**Topics:** python, blockchain, cryptography, digital-identity, security, sha256

@@ -1,4 +1,4 @@
-# Resume bullets — Blockchain Notarization + eID
+# Resume bullets
 
-- Designed a blockchain-inspired autonomous notarization prototype using SHA-256 hashing, ledger records, and integrity verification.  
-- Implemented a runnable Python demo (hash → record → verify) with SQLite persistence; mini project completed with industry mentoring.  
+- Designed a blockchain-inspired notarization prototype using SHA-256 fingerprints, ledger records, and integrity verification.  
+- Implemented a runnable Python demo (hash → record → verify) with SQLite persistence; completed with industry mentoring.  

@@ -1,18 +1,16 @@
 <div align="center">
 
-# Blockchain-Based Autonomous Notarization using National eID
+# Blockchain-Inspired Document Notarization + eID Concepts
 
-### B.Tech Mini Project · Cryptography · Digital Identity · Ledger concepts
+### Cryptography · Integrity · Digital Identity · Audit Ledger
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Hashing](https://img.shields.io/badge/Hashing-SHA--256-informational)](https://github.com/nikhilamaragani-jpg/blockchain-autonomous-notarization-e-id)
+[![Security](https://img.shields.io/badge/Hashing-SHA--256-informational)](src/hasher.py)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](Dockerfile)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Runnable%20Prototype-success)](https://github.com/nikhilamaragani-jpg/blockchain-autonomous-notarization-e-id)
 
-**Amaragani Nikhil Sai** · 22X31A0513 · SIIET (JNTUH) · Guide: Ch. Prabhakar  
-Industry mentoring: **Conscience Technologies** (Apr–May 2025)
-
-[Quick start](#quick-start) · [Architecture](#system-architecture) · [Scope](#implementation-status) · [Docs](#documentation)
+**Portfolio security / identity system** by [Amaragani Nikhil Sai](https://github.com/nikhilamaragani-jpg)  
+Runnable integrity workflow. SQLite ledger demo — not a mainnet smart-contract deployment.
 
 </div>
 
@@ -20,32 +18,57 @@ Industry mentoring: **Conscience Technologies** (Apr–May 2025)
 
 ## Problem
 
-Traditional notarization is often physical, slow, and hard to verify remotely. This mini project explores **BANS** ideas: national eID-style identity concepts, cryptographic document fingerprints, and ledger-style integrity verification.
-
-| Traditional limit | Project response |
-|-------------------|------------------|
-| Paper / manual process | Digital hash + record flow |
-| Hard remote verification | Re-hash and compare |
-| Weak audit trail | Timestamped ledger records |
+Paper notarization is slow, hard to verify remotely, and weak for audit trails. Digital documents need **tamper-evident fingerprints**, **identity-linked records**, and **fast verification**.
 
 ---
 
-## System architecture
+## Solution
+
+A **blockchain-inspired autonomous notarization prototype**:
+
+1. Hash document content (SHA-256)  
+2. Create a notarization record (owner / eID concept, timestamp, status)  
+3. Persist to a ledger store (SQLite demo)  
+4. Re-hash to verify MATCH / MISMATCH  
+
+Industry mentoring: **Conscience Technologies** (Apr–May 2025).
+
+---
+
+## Features
+
+- Deterministic SHA-256 fingerprints  
+- Notarization record model  
+- Integrity verification demo (valid + tampered)  
+- Ledger listing  
+- Dockerized demo run  
+- Unit tests for hashing / verify  
+
+---
+
+## Architecture
 
 ```text
-User + eID concept
-        |
-        v
-Document content → SHA-256 fingerprint
-        |
-        v
-Notarization record (owner, hash, timestamp, status)
-        |
-        v
-Ledger (SQLite demo · blockchain/smart-contract vision)
-        |
-        v
-Verify: re-hash → MATCH / MISMATCH
+Document bytes/text
+      |
+      v
+SHA-256 fingerprint
+      |
+      v
+Notarization record (owner, name, hash, time, status)
+      |
+      v
+Ledger store (SQLite demo)  ---->  Verify: re-hash compare
+```
+
+```mermaid
+flowchart LR
+  D[Document] --> H[SHA-256]
+  H --> R[Record + eID concept]
+  R --> L[Ledger]
+  D2[Submitted copy] --> V[Verify]
+  L --> V
+  V --> O[MATCH / MISMATCH]
 ```
 
 ---
@@ -55,71 +78,104 @@ Verify: re-hash → MATCH / MISMATCH
 | Area | Technology |
 |------|------------|
 | Language | Python 3 |
-| Hashing | `hashlib` SHA-256 |
-| Demo storage | SQLite ledger |
-| Report vision | Django UI, Web3/smart contracts, eID/PKI |
+| Crypto | hashlib SHA-256 |
+| Storage | SQLite ledger |
+| Packaging | Docker |
+| Quality | pytest |
+| Roadmap | Web3 contracts, PKI/eID, Django UI |
 
 ---
 
-## Quick start
+## Folder structure
+
+```text
+.
+├── README.md
+├── LICENSE
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
+├── src/
+│   ├── main.py
+│   ├── hasher.py
+│   ├── notarization.py
+│   └── database.py
+├── tests/
+├── docs/
+├── data/
+└── images/
+```
+
+---
+
+## Installation
 
 ```bash
 git clone https://github.com/nikhilamaragani-jpg/blockchain-autonomous-notarization-e-id.git
 cd blockchain-autonomous-notarization-e-id
 pip install -r requirements.txt
-python src/main.py
 ```
 
-Demo: hash → create record → verify original (MATCH) → verify tampered (MISMATCH) → list ledger.
+---
+
+## Usage
+
+```bash
+python src/main.py
+pytest -q
+docker compose up --build
+```
+
+---
+
+## Project workflow
+
+1. Prepare document text  
+2. Generate hash  
+3. Attach owner / demo eID metadata  
+4. Write ledger row  
+5. Verify original (MATCH) and tampered (MISMATCH)  
+
+---
+
+## Screenshots
+
+See `images/README.md` for capture checklist (CLI verify output).
+
+---
+
+## Results
+
+| Capability | Status |
+|------------|--------|
+| Hash + record + verify | Implemented |
+| Ledger snapshot | Implemented |
+| On-chain smart contracts | Roadmap |
+| Real national eID / PKI | Roadmap |
+
+---
+
+## Future improvements
+
+- [ ] Ethereum/testnet notary contract  
+- [ ] Real PKI signature binding  
+- [ ] REST API for verify endpoints  
+- [ ] Immutable object storage for originals (hash-only on chain)  
 
 ---
 
 ## Skills demonstrated
 
-| Skill | Evidence |
-|-------|----------|
-| Security mindset | Integrity via cryptographic hashing |
-| Systems thinking | Identity + record + verify flow |
-| Applied crypto basics | SHA-256 fingerprints |
-| Honest scoping | Prototype vs full stack checklist |
-
----
-
-## Implementation status
-
-**Runnable prototype**
-- [x] SHA-256 hashing  
-- [x] Notarization record creation  
-- [x] Integrity verification  
-- [x] SQLite ledger  
-
-**Full report / future work**
-- [ ] On-chain smart contracts  
-- [ ] Real national eID / PKI  
-- [ ] Full Django web UI from report screens  
+Applied cryptography basics · integrity design · digital identity concepts · modular Python · honest security scoping · Docker demos
 
 ---
 
 ## Documentation
 
-| File | Purpose |
-|------|---------|
-| [docs/PROJECT_BRIEF.md](docs/PROJECT_BRIEF.md) | Brief |
-| [docs/DEMO.md](docs/DEMO.md) | Demo |
-| [docs/INTERVIEW.md](docs/INTERVIEW.md) | Walkthrough |
-| [docs/RESUME_BULLETS.md](docs/RESUME_BULLETS.md) | Bullets |
-| [docs/ABOUT_TOPICS.md](docs/ABOUT_TOPICS.md) | Topics |
-
-**Suggested topics:** `python` · `blockchain` · `cryptography` · `digital-identity` · `security`
-
----
-
-## Author
-
-**Amaragani Nikhil Sai** · B.Tech CSE  
-Portfolio: https://nikhilamaragani-jpg.github.io/  
-Email: nikhilamaragani@gmail.com
+[PROJECT_BRIEF](docs/PROJECT_BRIEF.md) · [DEMO](docs/DEMO.md) · [INTERVIEW](docs/INTERVIEW.md) · [RESUME_BULLETS](docs/RESUME_BULLETS.md) · [ABOUT_TOPICS](docs/ABOUT_TOPICS.md)
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT
+
+**Author:** Amaragani Nikhil Sai · https://nikhilamaragani-jpg.github.io/

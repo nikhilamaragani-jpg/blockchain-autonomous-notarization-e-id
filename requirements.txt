@@ -1,1 +1,1 @@
-# No external packages required for basic demo
+pytest>=7.4.0

@@ -1,18 +1,7 @@
-# Project walkthrough — Blockchain Notarization + eID
+# Interview
 
-## 60-second summary
+**Pitch:** Integrity-first notarization prototype — hash documents, bind owner metadata, store ledger rows, verify tamper evidence.
 
-My mini project explores BANS: cryptographic document fingerprints (SHA-256), timestamped records, ledger storage, and integrity verification. The runnable prototype proves the integrity core; the report covers eID, smart contracts, and web UI vision. Completed with Conscience Technologies mentoring.
-
-## Demo
-
-```bash
-pip install -r requirements.txt
-python src/main.py
-```
-
-## Questions
-
-**Why store hashes not full files?** Privacy, size, and cost; hash proves integrity.  
-**What does eID add conceptually?** Stronger identity binding for the creator of the record.  
-**Prototype honesty?** SQLite ledger demo ≠ deployed blockchain + real eID.
+**Why hash-only storage?** Privacy, cost, size.  
+**eID role?** Stronger binding of who created the record.  
+**Chain vs DB?** Demo uses SQLite; chain adds multi-party immutability assumptions.

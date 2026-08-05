@@ -1,6 +1,6 @@
 """
-Blockchain-Based Autonomous Notarization System (BANS)
-Prototype: hash · record · verify · ledger
+Blockchain-inspired autonomous notarization prototype.
+Hash · record · verify · ledger
 """
 
 import sys
@@ -15,7 +15,7 @@ from database import init_db, save_record, list_records
 
 def banner() -> None:
     print("=" * 60)
-    print("  BANS Notarization Prototype  |  B.Tech Mini Project")
+    print("  Notarization + eID Concepts  |  Portfolio Integrity Demo")
     print("  SHA-256 · Ledger record · Integrity verification")
     print("=" * 60)
 
@@ -52,11 +52,11 @@ def main() -> None:
     print(f"    Timestamp : {record['timestamp']}")
     print(f"    Status    : {record['status']}")
 
-    print("\n[3] Verifying original content (expect VALID)...")
+    print("\n[3] Verifying original content...")
     result_ok = verify_record(record, sample_doc)
     print(f"    Result    : {result_ok}")
 
-    print("\n[4] Verifying tampered content (expect INVALID)...")
+    print("\n[4] Verifying tampered content...")
     tampered = sample_doc + " [unauthorized edit]"
     result_bad = verify_record(record, tampered)
     print(f"    Result    : {result_bad}")
@@ -68,8 +68,7 @@ def main() -> None:
         print(f"    - {name} | {own} | {status} | {created}")
         print(f"      hash={h[:16]}...")
 
-    print("\nDone. Core integrity workflow demonstrated.")
-    print("Full scope: eID/PKI, smart contracts, Django UI — see docs/REPORT_SUMMARY.md")
+    print("\nDone. Integrity core demonstrated (portfolio scope).")
 
 
 if __name__ == "__main__":
