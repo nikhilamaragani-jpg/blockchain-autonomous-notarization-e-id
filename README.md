@@ -1,146 +1,124 @@
-# Blockchain-Based Autonomous Notarization System Using E-ID
+# Blockchain-Based Autonomous Notarization Using National E-ID
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-blueviolet?logo=ethereum)](https://ethereum.org/)
-[![Solidity](https://img.shields.io/badge/Solidity-0.8%2B-darkred?logo=solidity)](https://soliditylang.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+**B.Tech Mini Project** | Blockchain | Digital Identity | Smart Contracts Concept
 
-**B.Tech Mini Project** | Blockchain | Digital Identity | Smart Contracts
+An academic project exploring how blockchain and digital identity concepts can be combined to design a secure digital notarization workflow.
 
 ---
 
-## 📋 Overview
+## Overview
 
-A blockchain-based autonomous notarization system that leverages national E-ID infrastructure for secure digital document authentication. Eliminates intermediaries through smart contracts while maintaining legal compliance.
+Traditional notarization processes often depend on centralized authorities. This project studies how blockchain principles (immutability, transparency) and electronic identity verification can support a more secure digital notarization concept.
 
-**Key Innovation:** Blockchain immutability + Government E-ID verification = Trustless notarization
-
----
-
-## ✨ Key Features
-
-- **E-ID Verification**: Government-level identity authentication
-- **Smart Contract Notarization**: Immutable, timestamped document records
-- **Autonomous System**: No central authority required
-- **Legal Compliance**: Adheres to digital signature standards
-- **Multi-Signature Support**: Multiple stakeholder verification
-- **Audit Trail**: Complete transaction history
-- **Cost Efficient**: Minimal transaction fees
+**Project Type:** Academic / Conceptual Design  
+**Status:** Concept + Basic Structure
 
 ---
 
-## 🏗️ System Architecture
+## Problem Statement
+
+Digital documents need trustworthy verification mechanisms. Centralized systems can face issues related to trust, transparency, and tampering risks.
+
+This project explores:
+- Using blockchain ideas for record integrity
+- Linking notarization with digital identity concepts
+- Designing a simple conceptual workflow
+
+---
+
+## Key Concepts Covered
+
+- Blockchain fundamentals
+- Digital identity and verification ideas
+- Smart contract concepts
+- Hashing and document integrity
+- System design for trust and transparency
+
+---
+
+## Tech Stack
+
+| Area              | Technologies / Concepts     |
+|-------------------|-----------------------------|
+| Language          | Python                      |
+| Blockchain Ideas  | Hashing, immutability, records |
+| Concepts          | Digital identity, smart contracts |
+| Tools             | Git                         |
+
+---
+
+## Project Structure
 
 ```
-User Interface → E-ID Verification → Smart Contract → Blockchain Network → Ledger
+blockchain-autonomous-notarization-e-id/
+━━ README.md
+━━ requirements.txt
+━━ .gitignore
+━━ LICENSE
+━━ src/
+│   ├── main.py
+│   ├── hasher.py
+│   └── notarization.py
+━━ docs/
 ```
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Blockchain**: Ethereum, Solidity
-- **Backend**: Python/Node.js
-- **Frontend**: React/Vue
-- **Database**: IPFS
-- **E-ID Integration**: [Your Provider]
-
----
-
-## 📦 Installation & Setup
+## How to Run
 
 ```bash
-# Clone the repository
 git clone https://github.com/nikhilamaragani-jpg/blockchain-autonomous-notarization-e-id.git
+cd blockchain-autonomous-notarization-e-id
 
-# Install dependencies
+python -m venv venv
+source venv/bin/activate
+
 pip install -r requirements.txt
-npm install
-
-# Configure environment
-cp .env.example .env
-# Add your blockchain RPC URL and E-ID credentials
-
-# Deploy contracts
-truffle migrate --network [network]
-
-# Start application
-python app.py
+python src/main.py
 ```
 
 ---
 
-## 🚀 Quick Start
+## Current Status
 
-```python
-from blockchain_notarizer import NotarizationService
-
-notary = NotarizationService(wallet="0x...", e_id_token="...")
-
-# Notarize document
-tx_hash = notary.notarize_document(
-    document_hash="0xabcd1234...",
-    document_name="Document.pdf"
-)
-
-# Verify notarization
-record = notary.verify_notarization(tx_hash)
-print(record)
-```
+- [x] Problem definition
+- [x] Conceptual design
+- [x] Repository structure
+- [x] Basic hashing and notarization demo logic
+- [ ] Smart contract implementation
+- [ ] Full E-ID integration (conceptual only for now)
 
 ---
 
-## 📊 Performance
+## Learning Outcomes
 
-| Metric | Value |
-|--------|-------|
-| Notarization Time | 2-15 seconds |
-| Average Gas Cost | $2-5 USD |
-| Verification Time | <1 second |
-
----
-
-## 🔒 Security
-
-- ✅ E-ID Government Verification
-- ✅ Cryptographic Hashing (SHA-256)
-- ✅ Blockchain Immutability
-- ✅ Digital Signature Support
+- Understanding blockchain principles
+- Applying cryptographic hashing for document integrity
+- Designing trust-oriented system workflows
+- Structuring academic technical projects
 
 ---
 
-## 📚 Documentation
+## Future Improvements
 
-- [Smart Contracts](./contracts/)
-- [API Documentation](./docs/API.md)
-- [Architecture](./docs/ARCHITECTURE.md)
-
----
-
-## 🎓 Learning Outcomes
-
-- Smart contract development (Solidity)
-- Blockchain integration
-- Digital identity systems
-- Cryptography and digital signatures
+- Add simple smart contract examples (Solidity)
+- Improve documentation of the notarization flow
+- Explore decentralized storage concepts (e.g., IPFS ideas)
+- Create a clearer architecture diagram
 
 ---
 
-## 🚀 Future Enhancements
+## Author
 
-- [ ] Multi-chain support (Polygon, BSC)
-- [ ] Mobile application
-- [ ] Government registry integration
-- [ ] Batch processing API
+**Amaragani Nikhil Sai**  
+B.Tech CSE | Incoming MS Computer Science @ Georgia State University  
 
----
-
-## 📝 License
-
-MIT License - see [LICENSE](LICENSE) file
+- GitHub: [nikhilamaragani-jpg](https://github.com/nikhilamaragani-jpg)  
+- LinkedIn: [Amaragani Nikhil Sai](https://linkedin.com/in/amaraganinikhilsai)  
+- Email: nikhilamaragani@gmail.com
 
 ---
 
-## 👤 Author
+## License
 
-**Amaragani Nikhil Sai** | [GitHub](https://github.com/nikhilamaragani-jpg) | [LinkedIn](#) | [Email](#)
+MIT License
