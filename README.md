@@ -20,7 +20,7 @@ Industry mentoring: **Conscience Technologies** (Apr–May 2025)
 
 ## Problem
 
-Traditional notarization is often physical, slow, and hard to verify remotely. This mini project explores **BANS** (Blockchain-Based Autonomous Notarization System) ideas: national eID-style identity concepts, cryptographic document fingerprints, and ledger-style integrity verification.
+Traditional notarization is often physical, slow, and hard to verify remotely. This mini project explores **BANS** ideas: national eID-style identity concepts, cryptographic document fingerprints, and ledger-style integrity verification.
 
 | Traditional limit | Project response |
 |-------------------|------------------|
@@ -57,7 +57,7 @@ Verify: re-hash → MATCH / MISMATCH
 | Language | Python 3 |
 | Hashing | `hashlib` SHA-256 |
 | Demo storage | SQLite ledger |
-| Report vision | Django UI, Web3.py / smart contracts, eID/PKI, optional IPFS |
+| Report vision | Django UI, Web3/smart contracts, eID/PKI |
 
 ---
 

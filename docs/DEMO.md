@@ -12,12 +12,3 @@ python src/main.py
 [4] Verify tampered → MISMATCH
 [5] Ledger snapshot
 ```
-
-```mermaid
-flowchart TD
-  D[Document] --> H[SHA-256]
-  H --> R[Record]
-  R --> L[SQLite Ledger]
-  L --> V[Verify re-hash]
-  V --> M{Match?}
-```

@@ -10,9 +10,9 @@
 
 ## Goal
 
-Demonstrate autonomous digital notarization concepts: document fingerprinting, ledger recording, and later integrity verification, aligned with national eID authentication ideas from the report.
+Demonstrate autonomous digital notarization concepts: document fingerprinting, ledger recording, and integrity verification.
 
 ## Prototype vs report
 
 - **Repo:** hash → record → verify → SQLite ledger CLI.  
-- **Report:** Django UI screens, smart contracts, eID/PKI, broader system design.  
+- **Report:** Django UI, smart contracts, eID/PKI, broader system design.  

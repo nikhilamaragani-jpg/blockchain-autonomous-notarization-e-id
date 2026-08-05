@@ -2,7 +2,7 @@
 
 ## 60-second summary
 
-Notarization is often physical and hard to verify remotely. My mini project explores BANS: cryptographic document fingerprints (SHA-256), timestamped records, ledger storage, and integrity verification. The runnable prototype proves the integrity core; the report covers eID, smart contracts, and web UI vision. Completed with Conscience Technologies mentoring.
+My mini project explores BANS: cryptographic document fingerprints (SHA-256), timestamped records, ledger storage, and integrity verification. The runnable prototype proves the integrity core; the report covers eID, smart contracts, and web UI vision. Completed with Conscience Technologies mentoring.
 
 ## Demo
 
