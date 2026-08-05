@@ -4,16 +4,18 @@ SQLite ledger for notarization records (prototype)
 
 import sqlite3
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 
-DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "notarization_ledger.db")
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+DB_PATH = os.path.join(BASE_DIR, "data", "notarization_ledger.db")
 
 
 def init_db():
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
-    cursor.execute("""
+    cursor.execute(
+        """
         CREATE TABLE IF NOT EXISTS ledger (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             document_name TEXT NOT NULL,
@@ -22,7 +24,8 @@ def init_db():
             status TEXT NOT NULL,
             created_at TEXT NOT NULL
         )
-    """)
+        """
+    )
     conn.commit()
     conn.close()
 
@@ -35,7 +38,13 @@ def save_record(document_name: str, document_hash: str, owner: str, status: str)
         INSERT INTO ledger (document_name, document_hash, owner, status, created_at)
         VALUES (?, ?, ?, ?, ?)
         """,
-        (document_name, document_hash, owner, status, datetime.utcnow().isoformat() + "Z"),
+        (
+            document_name,
+            document_hash,
+            owner,
+            status,
+            datetime.now(timezone.utc).isoformat(),
+        ),
     )
     conn.commit()
     conn.close()
