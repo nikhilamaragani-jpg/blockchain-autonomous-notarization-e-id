@@ -111,7 +111,7 @@ python src/main.py
 ## Author
 
 **Amaragani Nikhil Sai**  
-B.Tech CSE | Incoming MS Computer Science @ Georgia State University  
+B.Tech in Computer Science and Engineering  
 
 - GitHub: [nikhilamaragani-jpg](https://github.com/nikhilamaragani-jpg)  
 - LinkedIn: [Amaragani Nikhil Sai](https://linkedin.com/in/amaraganinikhilsai)  
