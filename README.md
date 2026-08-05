@@ -1,27 +1,66 @@
-# Blockchain-Based Autonomous Notarization Using National E-ID
+# Blockchain-Based Autonomous Notarization System Using National E-ID
 
 **B.Tech Mini Project**  
-**Author**: Amaragani Nikhil Sai  
-**Institution**: Sri Indu Institute of Engineering and Technology
-
-## Overview
-A secure digital notarization system that leverages blockchain technology and National E-ID verification to create tamper-proof records. The system focuses on transparency, trust, and fraud reduction in document verification workflows.
-
-## Key Concepts Demonstrated
-- Blockchain fundamentals and smart contract thinking
-- Digital identity verification (National E-ID)
-- Secure, transparent, and immutable record handling
-- System design for trust and compliance
-
-## Skills Demonstrated
-- Secure system design
-- Blockchain concepts
-- Digital identity integration
-- Understanding of tamper resistance and auditability
-
-## Status
-Academic project repository. Documentation and any available implementation details will be expanded as the portfolio grows.
+**Author**: Amaragani Nikhil Sai (22X31A0513)  
+**Institution**: Sri Indu Institute of Engineering and Technology  
+**Guide**: CH. Prabhakar, Assistant Professor  
+**Industry Partner**: Conscience Technologies (Apr–May 2025)
 
 ---
-**Part of**: Entry-Level Data & AI Career Roadmap  
-This project demonstrates security and systems thinking that complements data and AI engineering roles.
+
+## Problem
+
+Traditional notarization requires a notary public to authenticate document content. This makes full automation difficult. Fixed-date notarization (proving a document existed at a certain time, regardless of content authenticity) can be automated using blockchain + national e-ID.
+
+## Solution
+
+A fully automated notarization system that combines:
+
+- **National e-ID card** + Public Key Infrastructure (PKI)
+- **Smart contracts** on blockchain
+- Automatic authentication of the document creator and the document itself
+- Blockchain transaction receipt used as the notarization certificate
+- Verification performed inside the blockchain (no external verification authority needed)
+
+The system focuses specifically on **fixed-date notarization**, which is suitable for smart-contract replacement.
+
+## Key Concepts Demonstrated
+
+- Blockchain + Smart Contracts
+- Digital Identity (National e-ID)
+- Public Key Infrastructure (PKI)
+- Tamper-proof record keeping
+- Autonomous / trust-minimized systems
+- e-Government use case
+
+## High-Level Architecture
+
+```
+User signs electronic document with National e-ID
+        ↓
+Authentication of creator + document
+        ↓
+Information stored on Blockchain via Smart Contract
+        ↓
+Transaction Receipt = Notarization Certificate
+        ↓
+Verification happens inside the blockchain
+```
+
+## Skills & Domains
+
+`Blockchain` `Smart Contracts` `Digital Identity` `PKI` `Security` `e-Government` `System Design`
+
+## Project Status
+
+Academic mini-project completed (2024–2025).  
+This repository documents the system design, concept, and outcomes. Source code and detailed implementation artifacts will be added as the portfolio is strengthened.
+
+## Future Upgrade Direction
+
+This project can evolve into a production-oriented secure systems / identity project under the career roadmap (especially useful for roles involving security, data integrity, or compliance systems).
+
+---
+
+**Related Career Path**: Security & Systems thinking supporting Data Engineering and AI Systems roles  
+**Author**: [Amaragani Nikhil Sai](https://github.com/nikhilamaragani-jpg)
