@@ -2,6 +2,11 @@
 Blockchain-Based Autonomous Notarization (Concept Demo)
 """
 
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from hasher import generate_document_hash
 from notarization import create_notarization_record, verify_record
 
