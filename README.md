@@ -1,14 +1,14 @@
 <div align="center">
 
-# Blockchain-Inspired Notarization + eID Concepts
+# Blockchain-Based Autonomous Notarization + eID Concepts
 
-### Production-style Integrity Application · Cryptography · Audit Ledger
+### B.Tech Mini Project · Cryptography · Digital Identity · Ledger Demo
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](Dockerfile)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Amaragani Nikhil Sai** · Portfolio security / identity system  
+**Amaragani Nikhil Sai** · B.Tech CSE · SIIET (JNTUH)  
 Industry mentoring: Conscience Technologies (Apr–May 2025). SQLite ledger demo — not a mainnet deployment.
 
 </div>
@@ -17,13 +17,13 @@ Industry mentoring: Conscience Technologies (Apr–May 2025). SQLite ledger demo
 
 ## Problem
 
-Remote verification of document integrity is hard with paper-first processes. Teams need tamper-evident fingerprints, identity-linked records, and fast verify paths.
+Traditional notarization is often physical, slow, and hard to verify remotely. This mini project explores cryptographic document fingerprints, identity-oriented metadata, and integrity verification.
 
 ---
 
 ## Solution
 
-A **production-style integrity application**: hash → notarize record (eID-oriented metadata) → ledger store → verify MATCH/MISMATCH.
+A blockchain-inspired integrity prototype: hash → notarize record (eID-oriented metadata) → ledger store → verify MATCH/MISMATCH.
 
 ---
 
@@ -96,7 +96,7 @@ Capture CLI MATCH/MISMATCH to `images/cli_demo.png`.
 
 ## Results
 
-Demo proves hash stability and mismatch detection. On-chain contracts are roadmap only.
+Demo proves hash stability and mismatch detection. On-chain contracts are roadmap only (honest scope).
 
 ---
 
@@ -110,7 +110,7 @@ Demo proves hash stability and mismatch detection. On-chain contracts are roadma
 
 ## Skills demonstrated
 
-Applied cryptography · integrity design · digital identity concepts · modular Python · Docker · honest security scoping
+Applied cryptography · integrity design · digital identity concepts · modular Python · Docker · honest scoping
 
 ---
 
@@ -120,4 +120,4 @@ Applied cryptography · integrity design · digital identity concepts · modular
 
 ## License
 
-MIT · **Author:** Amaragani Nikhil Sai · https://nikhilamaragani-jpg.github.io/
+MIT · **Author:** Amaragani Nikhil Sai · B.Tech CSE · https://nikhilamaragani-jpg.github.io/
