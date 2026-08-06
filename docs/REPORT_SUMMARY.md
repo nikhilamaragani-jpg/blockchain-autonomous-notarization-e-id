@@ -25,3 +25,8 @@ Explore autonomous digital notarization: document integrity via cryptographic fi
 | Broader stack possibilities (web, contracts) | **Roadmap** — not claimed as deployed chain |
 
 SQLite ledger demonstrates integrity workflow; on-chain smart contracts and real national eID/PKI are future work.
+
+## Full PDF
+
+[Download mini project report (PDF)](reports/Mini_Project_Blockchain_Notarization_eID_Report.pdf)
+

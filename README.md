@@ -18,6 +18,9 @@ Report notes: [docs/REPORT_SUMMARY.md](docs/REPORT_SUMMARY.md)
 
 ---
 
+![Report cover](images/report_cover.svg)
+
+
 ## Problem
 
 Traditional notarization is often physical, slow, and hard to verify remotely. This mini project explores cryptographic fingerprints, eID-oriented identity concepts, and integrity verification.
@@ -66,3 +69,8 @@ pytest -q
 ## License
 
 MIT · **Author:** Amaragani Nikhil Sai · https://nikhilamaragani-jpg.github.io/
+
+### Academic report PDF
+
+- **Mini project PDF:** [docs/reports/Mini_Project_Blockchain_Notarization_eID_Report.pdf](docs/reports/Mini_Project_Blockchain_Notarization_eID_Report.pdf)
+
