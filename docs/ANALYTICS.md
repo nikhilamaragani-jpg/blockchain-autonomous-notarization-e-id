@@ -8,6 +8,8 @@ python src/main.py analytics --format json > analytics.json
 python src/main.py export-csv ledger.csv
 ```
 
+An optional [Streamlit dashboard](DASHBOARD.md) provides charts for the same live ledger. It is not required for CLI use.
+
 ## Metric definitions
 
 | Metric | Definition |

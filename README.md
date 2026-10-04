@@ -76,6 +76,17 @@ python src/main.py
 
 `analytics` reports SQL-derived metrics over the local ledger. Metrics and their definitions, sample queries, and interpretation limits are documented in [docs/ANALYTICS.md](docs/ANALYTICS.md). CSV and JSON exports contain ledger metadata and hashes, not document contents; hashes can still be sensitive linkable data, so protect exports appropriately.
 
+### Optional dashboard
+
+Install Streamlit and launch an interactive local dashboard over the same ledger:
+
+```bash
+python -m pip install -r requirements-dashboard.txt
+python -m streamlit run dashboard/app.py
+```
+
+It visualizes notarization activity and verification outcomes without exposing document names or owner labels. See [docs/DASHBOARD.md](docs/DASHBOARD.md) for configuration, metric caveats, and privacy notes. Streamlit is optional; the core CLI has no runtime dependencies.
+
 ## Development
 
 ```bash
