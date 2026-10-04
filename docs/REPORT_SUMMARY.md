@@ -21,12 +21,11 @@ Explore autonomous digital notarization: document integrity via cryptographic fi
 | Report / mentoring | This repository |
 |--------------------|-----------------|
 | Full mini-project documentation | Runnable **hash → record → verify** prototype |
-| Blockchain / eID / system design vision | **SHA-256** + **SQLite ledger** demo |
+| Blockchain / eID / system design vision | Streaming **SHA-256**, **SQLite ledger**, verification history, and reproducible analytics |
 | Broader stack possibilities (web, contracts) | **Roadmap** — not claimed as deployed chain |
 
-SQLite ledger demonstrates integrity workflow; on-chain smart contracts and real national eID/PKI are future work.
+SQLite demonstrates a local integrity workflow, not a tamper-proof blockchain. On-chain smart contracts and real national eID/PKI are future work. Ledger analytics are descriptive and do not imply adoption or legal validity.
 
 ## Full PDF
 
 [Download mini project report (PDF)](reports/Mini_Project_Blockchain_Notarization_eID_Report.pdf)
-

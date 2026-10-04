@@ -14,5 +14,6 @@ Demonstrate autonomous digital notarization concepts: document fingerprinting, l
 
 ## Prototype vs report
 
-- **Repo:** hash · create record · verify MATCH/MISMATCH · list ledger.  
-- **Report / vision:** fuller BANS / eID system design; possible web or contract extensions.  
+- **Repo:** stream-hash files · create SQLite records · verify MATCH/MISMATCH ·
+  analyze ledger and verification metrics · export metadata to JSON/CSV.
+- **Report / vision:** fuller BANS / eID system design; possible web or contract extensions.
