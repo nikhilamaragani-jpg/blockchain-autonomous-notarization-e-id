@@ -96,3 +96,9 @@ This repository is an educational prototype, not a tamper-proof distributed ledg
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+## Portfolio positioning
+
+This is an academic / industry-mentored technical project kept as supporting evidence. Its strongest portfolio relevance is auditable data, SQLite analytics, hashing, and reproducible reporting; it is not part of the primary Data Analyst flagship work.
+
+For the current Data Analyst portfolio, see: https://nikhilamaragani-jpg.github.io/
